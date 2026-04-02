@@ -503,3 +503,21 @@
     display: block;
   }
 }
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    max-height: 80vh;   /* 👈 IMPORTANT */
+    overflow-y: auto;   /* 👈 ENABLE SCROLL */
+  }
+}
+@media (max-width: 991px) {
+  .dropdown-menu {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+}
+@media (max-width: 991px) {
+  .navbar-collapse {
+    padding-bottom: 20px;
+  }
+}
