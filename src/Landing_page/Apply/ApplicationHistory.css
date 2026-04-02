@@ -1,0 +1,259 @@
+/* PAGE CONTAINER */
+
+.history-container{
+max-width:900px;
+margin:auto;
+padding:30px 15px;
+}
+
+/* PAGE TITLE */
+
+.history-container h2{
+text-align:center;
+font-size:26px;
+margin-bottom:25px;
+color:#0f172a;
+}
+
+/* APPLICATION CARD */
+
+.history-card{
+
+background:#ffffff;
+
+padding:22px;
+margin-bottom:22px;
+
+border-radius:12px;
+
+box-shadow:0 4px 18px rgba(0,0,0,0.05);
+
+transition:all 0.25s ease;
+
+border-left:5px solid #2563eb;
+
+}
+
+.history-card:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 10px 28px rgba(0,0,0,0.08);
+
+}
+
+/* GIG TITLE */
+
+.history-card h3{
+font-size:20px;
+font-weight:600;
+margin-bottom:10px;
+color:#0f172a;
+}
+
+/* TEXT DETAILS */
+
+.history-card p{
+
+font-size:14px;
+margin:5px 0;
+color:#334155;
+
+}
+
+.history-card strong{
+color:#0f172a;
+}
+
+/* APPLIED DATE */
+
+.applied-date{
+
+margin-top:10px;
+font-size:13px;
+color:#64748b;
+
+}
+
+/* IMAGE PREVIEW */
+
+.preview-container{
+
+display:flex;
+gap:10px;
+margin-top:10px;
+
+}
+
+.preview-img{
+
+width:80px;
+height:80px;
+
+object-fit:cover;
+
+border-radius:8px;
+
+border:1px solid #e2e8f0;
+
+}
+
+/* MAP BUTTON */
+
+.map-btn{
+
+margin-top:6px;
+
+padding:6px 12px;
+
+background:#2563eb;
+color:white;
+
+border:none;
+border-radius:6px;
+
+font-size:13px;
+
+cursor:pointer;
+
+transition:0.2s;
+
+}
+
+.map-btn:hover{
+
+background:#1d4ed8;
+
+}
+
+/* CONFIRM BUTTON */
+
+.confirm-btn{
+
+background:#22c55e;
+color:white;
+
+border:none;
+padding:7px 12px;
+
+border-radius:6px;
+
+cursor:pointer;
+
+font-size:13px;
+
+}
+
+.confirm-btn:hover{
+background:#16a34a;
+}
+
+/* REJECT BUTTON */
+
+.reject-btn{
+
+background:#ef4444;
+color:white;
+
+border:none;
+padding:7px 12px;
+
+border-radius:6px;
+
+cursor:pointer;
+
+font-size:13px;
+
+}
+
+.reject-btn:hover{
+background:#dc2626;
+}
+
+/* CONTRACT BUTTONS */
+
+.contract-buttons{
+
+display:flex;
+gap:10px;
+margin-top:10px;
+
+}
+
+/* VIEW CONTRACT */
+
+.visit-contract-btn{
+
+margin-top:8px;
+
+background:#2563eb;
+color:white;
+
+border:none;
+
+padding:7px 12px;
+
+border-radius:6px;
+
+cursor:pointer;
+
+font-size:13px;
+
+}
+
+.visit-contract-btn:hover{
+background:#1d4ed8;
+}
+
+/* DELETE HISTORY */
+
+.delete-history-btn{
+
+margin-top:12px;
+
+background:#64748b;
+color:white;
+
+border:none;
+
+padding:7px 12px;
+
+border-radius:6px;
+
+cursor:pointer;
+
+font-size:13px;
+
+}
+
+.delete-history-btn:hover{
+background:#475569;
+}
+
+/* NO HISTORY MESSAGE */
+
+.no-history{
+
+text-align:center;
+
+color:#64748b;
+
+font-size:15px;
+
+margin-top:40px;
+
+}
+
+/* LOADING */
+
+.loading{
+
+text-align:center;
+
+margin-top:40px;
+
+font-size:16px;
+
+color:#334155;
+
+}

@@ -1,0 +1,42 @@
+.wallet-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.wallet-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 320px;
+}
+
+.wallet-balance {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.wallet-history {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.tx {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 0.9rem;
+}
+
+.tx.debit { color: #dc3545; }
+.tx.credit { color: #198754; }
+
+.topup-btn,
+.close-btn {
+  width: 100%;
+  margin-top: 10px;
+}

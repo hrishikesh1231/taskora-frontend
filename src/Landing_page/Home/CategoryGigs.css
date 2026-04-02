@@ -1,0 +1,102 @@
+/* ================= PAGE ================= */
+.gigs-page {
+  min-height: 100vh;
+  padding: 60px 30px 80px;
+  background: #f8fafc;
+}
+
+/* ================= TITLE ================= */
+.gigs-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 50px;
+}
+
+/* ================= GRID ================= */
+.gigs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+/* ================= CARD ================= */
+.gig-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 26px;
+  box-shadow: 0 8px 26px rgba(15, 23, 42, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.gig-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
+}
+
+/* ================= TITLE ================= */
+.gig-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* ================= DESCRIPTION ================= */
+.gig-desc {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* ================= META ================= */
+.gig-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+/* duration pill */
+.gig-duration {
+  font-size: 0.85rem;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* location */
+.gig-location {
+  font-size: 0.85rem;
+  color: #334155;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* ================= EMPTY ================= */
+.no-gigs {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #64748b;
+  margin-top: 80px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .gigs-page {
+    padding: 40px 18px 60px;
+  }
+
+  .gigs-title {
+    font-size: 2rem;
+    margin-bottom: 36px;
+  }
+}

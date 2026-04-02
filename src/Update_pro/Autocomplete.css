@@ -1,0 +1,82 @@
+.autocomplete {
+  position: relative;
+  width: 100%;
+  overflow: visible !important;
+}
+
+/* Input styling (inherits blue theme from EditProfile.css) */
+.autocomplete input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #b0cfff;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.autocomplete input:focus {
+  border-color: #2c6ed5; /* blue */
+  box-shadow: 0 0 6px rgba(44, 110, 213, 0.4);
+}
+
+/* Suggestions dropdown */
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  background: #fff;
+  border: 1px solid #2c6ed5;
+  border-radius: 6px;
+  max-height: 220px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  z-index: 99999 !important;
+  box-shadow: 0 6px 18px rgba(44, 110, 213, 0.25);
+  animation: dropdownFade 0.2s ease-in-out;
+}
+
+/* Suggestion items */
+.suggestions li {
+  padding: 10px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Hover & keyboard active state */
+.suggestions li:hover,
+.suggestions li.active {
+  background: #e6f0ff; /* light blue background */
+  color: #2c6ed5;
+  font-weight: 500;
+}
+
+/* Scrollbar styling */
+.suggestions::-webkit-scrollbar {
+  width: 6px;
+}
+
+.suggestions::-webkit-scrollbar-thumb {
+  background: #2c6ed5;
+  border-radius: 6px;
+}
+
+.suggestions::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+/* Animation */
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

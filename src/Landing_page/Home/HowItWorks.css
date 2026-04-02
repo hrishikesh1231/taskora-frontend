@@ -1,0 +1,173 @@
+:root {
+  --blue: #4a90e2;
+  --green: #2ecc71;
+  --yellow: #f5a623;
+  --text-dark: #1a2b4c;
+}
+
+/* ================= SECTION ================= */
+.howitworks-container {
+  width: 100%;
+  background: linear-gradient(135deg, #e7edf0 30%, #aef1f7d9 60%);
+  padding: 60px 20px;
+  box-sizing: border-box;
+
+  /* base hidden state */
+  opacity: 0;
+  transform: translateY(70px);
+}
+
+/* animation trigger */
+.howitworks-container.animate {
+  animation: sectionFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ================= INNER ================= */
+.howitworks-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.howitworks-inner h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.subtitle {
+  color: #7b8a97;
+  margin-bottom: 40px;
+}
+
+/* ================= STEPS ================= */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* ================= CARD ================= */
+.step-card {
+  flex: 1;
+  min-width: 240px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 20px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(17, 24, 39, 0.06);
+
+  /* base hidden state */
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+}
+
+/* cards animate when section animates */
+.howitworks-container.animate .step-card {
+  animation: cardFadeUp 0.6s ease forwards;
+}
+
+/* stagger effect */
+.howitworks-container.animate .step-card:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.howitworks-container.animate .step-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.howitworks-container.animate .step-card:nth-child(3) {
+  animation-delay: 0.45s;
+}
+
+/* hover */
+.step-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 14px 30px rgba(17, 24, 39, 0.1);
+}
+
+/* ================= ICON ================= */
+.step-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  font-size: 1.8rem;
+  box-shadow: 0 8px 20px rgba(17, 24, 39, 0.06);
+}
+
+.step-one .step-icon svg {
+  color: var(--blue);
+}
+.step-two .step-icon svg {
+  color: var(--green);
+}
+.step-three .step-icon svg {
+  color: var(--yellow);
+}
+
+/* ================= NUMBER ================= */
+.step-number {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: var(--yellow);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+/* ================= TEXT ================= */
+.step-card h3 {
+  margin: 8px 0;
+  font-size: 1.15rem;
+  color: var(--text-dark);
+}
+
+.step-card p {
+  color: #5f6b73;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* ================= KEYFRAMES ================= */
+
+@keyframes sectionFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 880px) {
+  .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step-card {
+    width: 100%;
+    max-width: 640px;
+  }
+}

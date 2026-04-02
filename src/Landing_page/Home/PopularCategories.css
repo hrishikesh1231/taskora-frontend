@@ -1,0 +1,225 @@
+/* ================= SECTION ================= */
+
+.categories-section{
+
+min-height:100vh;
+width:100%;
+
+padding:110px 20px;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+
+position:relative;
+overflow:hidden;
+
+/* professional dark background */
+
+background:
+linear-gradient(
+rgba(15,23,42,0.85),
+rgba(2,6,23,0.95)
+),
+url("/public/images/services-bg.png");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+}
+
+/* background glow */
+
+.categories-section::before{
+
+content:"";
+position:absolute;
+
+top:-120px;
+left:-120px;
+
+width:340px;
+height:340px;
+
+background:rgba(99,102,241,0.25);
+
+border-radius:50%;
+filter:blur(140px);
+
+}
+
+.categories-section::after{
+
+content:"";
+position:absolute;
+
+bottom:-120px;
+right:-120px;
+
+width:340px;
+height:340px;
+
+background:rgba(34,197,94,0.25);
+
+border-radius:50%;
+filter:blur(140px);
+
+}
+
+/* keep content above */
+
+.categories-title,
+.categories-grid{
+position:relative;
+z-index:2;
+}
+
+
+/* ================= TITLE ================= */
+
+.categories-title{
+
+font-size:3rem;
+font-weight:800;
+
+margin-bottom:70px;
+
+color:#ffffff;
+
+text-align:center;
+
+letter-spacing:-0.5px;
+
+}
+
+/* gradient brand */
+
+.categories-title span{
+
+background:linear-gradient(90deg,#6366f1,#22c55e);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+
+/* ================= GRID ================= */
+
+.categories-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+max-width:950px;
+width:100%;
+
+}
+
+
+/* ================= CARD ================= */
+
+.category-card{
+
+background:rgba(255,255,255,0.08);
+
+backdrop-filter:blur(10px);
+
+padding:30px 20px;
+
+border-radius:16px;
+
+border:1px solid rgba(255,255,255,0.08);
+
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+
+text-align:center;
+
+cursor:pointer;
+
+transition:all 0.35s ease;
+
+}
+
+/* ================= HOVER ================= */
+
+.category-card:hover{
+
+transform:translateY(-8px) scale(1.02);
+
+background:rgba(255,255,255,0.12);
+
+box-shadow:0 25px 50px rgba(0,0,0,0.35);
+
+}
+
+
+/* ================= ICON ================= */
+
+.category-card .icon{
+
+font-size:34px;
+
+color:#60a5fa;
+
+margin-bottom:14px;
+
+transition:transform 0.3s ease;
+
+}
+
+.category-card:hover .icon{
+transform:scale(1.15);
+}
+
+
+/* ================= TEXT ================= */
+
+.category-card h3{
+
+font-size:1.05rem;
+
+font-weight:600;
+
+color:#e2e8f0;
+
+}
+
+
+/* ================= TABLET ================= */
+
+@media(max-width:900px){
+
+.categories-grid{
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+}
+
+.categories-title{
+font-size:2.5rem;
+}
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:500px){
+
+.categories-grid{
+grid-template-columns:1fr;
+}
+
+.categories-title{
+font-size:2rem;
+}
+
+.category-card{
+padding:24px 18px;
+}
+
+}

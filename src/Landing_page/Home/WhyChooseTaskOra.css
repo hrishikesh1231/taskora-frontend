@@ -1,0 +1,311 @@
+/* ================= SECTION ================= */
+
+.why-section{
+min-height:100vh;
+width:100%;
+
+padding:110px 20px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+text-align:center;
+
+overflow:hidden;
+position:relative;
+
+/* PROFESSIONAL DARK OVERLAY */
+
+background:
+linear-gradient(
+rgba(15,23,42,0.75),
+rgba(2,6,23,0.9)
+),
+url("/public/images/taskora-bg.png");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+/* ================= BACKGROUND GLOW ================= */
+
+.why-section::before{
+content:"";
+position:absolute;
+top:-120px;
+left:-120px;
+
+width:360px;
+height:360px;
+
+background:rgba(99,102,241,0.25);
+border-radius:50%;
+
+filter:blur(140px);
+}
+
+.why-section::after{
+content:"";
+position:absolute;
+bottom:-120px;
+right:-120px;
+
+width:360px;
+height:360px;
+
+background:rgba(34,197,94,0.25);
+border-radius:50%;
+
+filter:blur(140px);
+}
+
+/* keep content above */
+
+.why-header,
+.why-grid{
+position:relative;
+z-index:2;
+}
+
+/* ================= HEADER ================= */
+
+.why-header h2{
+
+font-size:3rem;
+font-weight:800;
+letter-spacing:-0.5px;
+
+color:#ffffff;
+margin-bottom:10px;
+}
+
+/* gradient brand text */
+
+.why-header span{
+
+background:linear-gradient(90deg,#6366f1,#22c55e);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+position:relative;
+}
+
+/* underline highlight */
+
+.why-header span::after{
+
+content:"";
+position:absolute;
+
+left:20%;
+bottom:-8px;
+
+width:60%;
+height:4px;
+
+background:linear-gradient(90deg,#6366f1,#22c55e);
+
+border-radius:10px;
+}
+
+/* subtitle */
+
+.why-header p{
+
+max-width:640px;
+margin:16px auto 70px;
+
+font-size:1.05rem;
+line-height:1.7;
+
+color:#cbd5f5;
+}
+
+/* ================= GRID ================= */
+
+.why-grid{
+
+display:grid;
+grid-template-columns:1fr 480px 1fr;
+
+align-items:center;
+
+gap:60px;
+
+max-width:1200px;
+margin:auto;
+}
+
+/* ================= COLUMN ================= */
+
+.why-column{
+display:flex;
+flex-direction:column;
+gap:45px;
+}
+
+/* ================= FEATURE CARD ================= */
+
+.why-item{
+
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+
+padding:22px 22px;
+
+border-radius:14px;
+
+border:1px solid rgba(255,255,255,0.08);
+
+box-shadow:0 8px 25px rgba(0,0,0,0.25);
+
+text-align:left;
+
+opacity:0;
+transform:translateX(-80px);
+
+transition:all 0.6s ease;
+}
+
+/* stagger animation */
+
+.why-column .why-item:nth-child(1){
+transition-delay:0.2s;
+}
+
+.why-column .why-item:nth-child(2){
+transition-delay:0.4s;
+}
+
+/* appear animation */
+
+.why-section.animate .why-item{
+opacity:1;
+transform:translateX(0);
+}
+
+/* hover effect */
+
+.why-item:hover{
+
+transform:translateY(-6px);
+
+background:rgba(255,255,255,0.12);
+
+box-shadow:0 18px 40px rgba(0,0,0,0.35);
+}
+
+/* title */
+
+.why-item h3{
+font-size:1.1rem;
+color:#ffffff;
+margin-bottom:6px;
+}
+
+/* text */
+
+.why-item p{
+color:#cbd5e1;
+font-size:0.95rem;
+line-height:1.6;
+}
+
+/* ================= ICON ================= */
+
+.why-icon{
+font-size:30px;
+margin-bottom:10px;
+}
+
+.blue{color:#3b82f6;}
+.green{color:#22c55e;}
+.purple{color:#8b5cf6;}
+.orange{color:#fb923c;}
+
+/* ================= IMAGE ================= */
+
+.why-image{
+display:flex;
+justify-content:center;
+}
+
+.why-image img{
+
+width:115%;
+max-width:520px;
+
+border-radius:18px;
+
+box-shadow:0 40px 80px rgba(0,0,0,0.45);
+
+opacity:0;
+transform:translateX(120px);
+
+transition:all 0.8s ease;
+}
+
+/* appear */
+
+.why-section.animate .why-image img{
+opacity:1;
+transform:translateX(0);
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width:1024px){
+
+.why-grid{
+grid-template-columns:1fr 420px 1fr;
+gap:40px;
+}
+
+.why-image img{
+max-width:420px;
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:900px){
+
+.why-grid{
+grid-template-columns:1fr;
+gap:55px;
+}
+
+.why-image{
+order:-1;
+}
+
+.why-image img{
+width:100%;
+max-width:420px;
+}
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width:480px){
+
+.why-header h2{
+font-size:2rem;
+}
+
+.why-header p{
+font-size:0.9rem;
+}
+
+.why-item{
+padding:18px;
+}
+
+.why-image img{
+max-width:320px;
+}
+
+}

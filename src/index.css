@@ -1,0 +1,45 @@
+body{
+      background: linear-gradient(to bottom right, #f8f9ff, #f4faff, #fdf6ff);
+}
+
+/* ================= TOAST FIX ================= */
+.Toastify__toast-container.toast-container-override {
+  z-index: 9999 !important;
+  margin-top: 75px !important;
+}
+
+/* Hot toast override */
+.hot-toast-override {
+  z-index: 9999 !important;
+  top: 75px !important;
+}
+/* =====================================
+   GLOBAL LAYOUT FIX
+===================================== */
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
+  padding-bottom: 40px;
+}
+/* ================= TOAST FIX – FINAL ================= */
+
+.Toastify__toast-container {
+  z-index: 99999 !important;
+  position: fixed !important;
+  top: 80px !important;   /* push below navbar */
+}
+
+.Toastify__toast {
+  z-index: 99999 !important;
+}

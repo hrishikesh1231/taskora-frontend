@@ -1,0 +1,111 @@
+.notifications-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.notifications-card {
+  width: 600px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.notif-row {
+  position: relative;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.notif-row.unread {
+  background: #f5faff;
+}
+
+.notif-content {
+  cursor: pointer;
+}
+
+.mark-read-btn {
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  font-size: 12px;
+  margin-right: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.mark-read-btn:hover {
+  background: #084298;
+}
+
+.mark-all-btn {
+  background: #198754;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.mark-all-btn:hover {
+  background: #146c43;
+}
+
+.notify-delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.05);
+  color: #555;
+
+  font-size: 14px;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+/* Hover Effect */
+.notify-delete-btn:hover {
+  background: #ffe5e5;
+  color: #ff4d4f;
+  transform: scale(1.1);
+}
+
+/* Click Effect */
+.notify-delete-btn:active {
+  transform: scale(0.9);
+}
+
+/* Optional: subtle shadow on hover */
+.notify-delete-btn:hover {
+  box-shadow: 0 2px 8px rgba(255, 77, 79, 0.25);
+}
+.clear-all-btn {
+  margin-top: 15px;
+  width: 100%;
+  border: none;
+  padding: 8px;
+  background: red;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.clear-all-btn:hover {
+  background: darkred;
+}

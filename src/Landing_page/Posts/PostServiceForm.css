@@ -1,0 +1,175 @@
+/* ================================
+   FULL PAGE BACKGROUND
+================================ */
+
+body:has(.service-form-container) {
+  min-height: 100vh;
+
+  background-image: url("../../assets/bg-post-gig.jpg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body:has(.service-form-container)::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: -1;
+}
+
+/* ================================
+   FORM CARD
+================================ */
+
+.service-form-container {
+
+  max-width: 520px;
+  margin: 60px auto;
+  padding: 32px;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+
+}
+
+/* ================================
+   TITLE
+================================ */
+
+.service-form-container h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* ================================
+   FORM
+================================ */
+
+.service-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ================================
+   INPUTS
+================================ */
+
+.service-form-container input,
+.service-form-container textarea,
+.service-form-container select {
+
+  width: 100%;
+  padding: 13px 14px;
+
+  font-size: 15px;
+
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+
+  transition: all .25s ease;
+
+}
+
+.service-form-container textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.service-form-container input:focus,
+.service-form-container textarea:focus,
+.service-form-container select:focus {
+
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+  outline: none;
+
+}
+
+/* ================================
+   LOCATION BUTTON
+================================ */
+
+.location-btn {
+
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+
+  background: #2563eb;
+  color: white;
+
+  cursor: pointer;
+  margin-bottom: 10px;
+
+}
+
+.location-btn:hover {
+  background: #1d4ed8;
+}
+
+/* ================================
+   MAP
+================================ */
+
+.map-box {
+
+  height: 300px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+
+}
+
+/* ================================
+   SUBMIT BUTTON
+================================ */
+
+.service-form-container button[type="submit"] {
+
+  margin-top: 14px;
+  padding: 14px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  border-radius: 10px;
+  border: none;
+
+  cursor: pointer;
+
+  color: white;
+
+  background: linear-gradient(135deg,#2563eb,#1d4ed8);
+
+}
+
+.service-form-container button[type="submit"]:hover {
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 12px 24px rgba(37,99,235,.35);
+
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width:768px){
+
+.service-form-container{
+
+margin:20px;
+padding:24px;
+
+}
+
+}

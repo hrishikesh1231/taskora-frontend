@@ -1,0 +1,166 @@
+.hero-container {
+  padding: 60px 20px 40px;
+  text-align: center;
+
+  background: linear-gradient(135deg, #f9fafb, #eef5ff);
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle background glow */
+.hero-container::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 220px;
+  height: 220px;
+  background: rgba(37, 99, 235, 0.12);
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+.hero-container::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  background: rgba(22, 163, 74, 0.12);
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+/* ================= FLOAT ANIMATION ================= */
+@keyframes textFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ================= HEADING ================= */
+.hero-container h1 {
+  font-size: 4.2rem;
+  font-weight: 800;
+  color: #1f2937;
+      margin-left: -29%;
+
+  animation: textFloat 3.5s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-container h1 span {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= SUBTITLE ================= */
+.hero-container h5 {
+  margin-top: 12px;
+  font-size: 1.2rem;
+  color: #4b5563;
+  margin-left: -30%;
+  animation: textFloat 3.5s ease-in-out infinite;
+  animation-delay: 0.6s; /* slight delay = smooth effect */
+
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 50px 15px 30px;
+  }
+
+  .hero-container h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero-container h5 {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ================= LARGE SCREEN FIX ================= */
+@media (max-width: 1200px){
+
+  .hero-container h1{
+    margin-left:-15%;
+    font-size:3.2rem;
+  }
+
+  .hero-container h5{
+    margin-left:-15%;
+  }
+
+}
+
+
+/* ================= TABLET ================= */
+@media (max-width: 992px){
+
+  .hero-container{
+    text-align:center;
+  }
+
+  .hero-container h1{
+    margin-left:0;
+    font-size:2.6rem;
+  }
+
+  .hero-container h5{
+    margin-left:0;
+    font-size:1.05rem;
+  }
+
+}
+
+
+/* ================= MOBILE ================= */
+@media (max-width:768px){
+
+  .hero-container{
+    padding:50px 15px 30px;
+  }
+
+  .hero-container h1{
+    margin-left:0;
+    font-size:2rem;
+  }
+
+  .hero-container h5{
+    margin-left:0;
+    font-size:0.95rem;
+  }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width:480px){
+
+  .hero-container h1{
+    font-size:1.7rem;
+  }
+
+  .hero-container h5{
+    font-size:0.9rem;
+  }
+
+}

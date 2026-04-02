@@ -1,0 +1,78 @@
+.buy-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa, #e4e8f0);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.buy-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: 600;
+  color: #333;
+}
+
+.token-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.token-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.token-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.token-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #4e73df;
+}
+
+.token-card button {
+  background: #4e73df;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.token-card button:hover {
+  background: #2e59d9;
+}
+
+/* Highlight popular pack */
+.popular {
+  border: 2px solid #4e73df;
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #ff4757;
+  color: white;
+  padding: 5px 12px;
+  font-size: 12px;
+  border-radius: 20px;
+}

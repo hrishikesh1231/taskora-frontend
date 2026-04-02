@@ -1,0 +1,104 @@
+/* PAGE */
+.how-page {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* HERO */
+.how-hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.how-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.how-hero p {
+  color: #475569;
+  font-size: 1.05rem;
+}
+
+/* SECTION */
+.how-section {
+  margin-bottom: 45px;
+}
+
+.how-section h2 {
+  margin-bottom: 18px;
+  font-size: 1.4rem;
+  color: #1e293b;
+}
+
+/* CARD */
+.how-card {
+  background: white;
+  padding: 18px 20px;
+  border-radius: 14px;
+  margin-bottom: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.25s ease;
+  position: relative;
+}
+
+.how-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+.how-card h3 {
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+.how-card p {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* STEP NUMBER */
+.step-number {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  color: white;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+/* ✨ Animations */
+.fade-in {
+  animation: fadeIn 0.7s ease;
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(25px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .how-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .how-section h2 {
+    font-size: 1.2rem;
+  }
+}
