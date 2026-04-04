@@ -45,6 +45,7 @@ function AutocompleteInput({ label, name, value, onChange, fetchSuggestions }) {
         value={value}
         onChange={handleInputChange}
         autoComplete="off"
+        placeholder="Enter city here"
       />
       {showSuggestions && suggestions.length > 0 && (
         <ul className="suggestions">
