@@ -739,6 +739,19 @@ const SignUp = () => {
     <div className="signup-container">
       <form className="signup-form" onSubmit={handleSubmit} autoComplete="off">
         <h2>Sign Up</h2>
+        <div className="alert-box">
+        <span className="alert-icon">⚠️</span>
+        <div className="alert-text">
+          <p>
+            Due to deployment limitations (Render free plan & Nodemailer), signup may not work properly.
+          </p>
+          <p className="demo-cred">
+            Please use demo login:
+            <b> Username: hrishikesh | Password: 1234 </b>
+            <b> Username: atharva | Password: 1234 </b>
+          </p>
+        </div>
+      </div>
 
         <input
           type="text"

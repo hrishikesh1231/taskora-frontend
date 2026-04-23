@@ -2,187 +2,226 @@
 .signup-container {
   min-height: 100vh;
   width: 100%;
-  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
-  position: relative;
-  overflow: hidden;
-  animation: pageFade 0.6s ease-out forwards;
-}
-
-.signup-container::before {
-  content: "";
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(13,110,253,0.1) 0%, rgba(255,255,255,0) 70%);
-  top: -10%;
-  right: -10%;
-  border-radius: 50%;
-  z-index: 0;
-}
-.signup-container::after {
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(56,189,248,0.12) 0%, rgba(255,255,255,0) 70%);
-  bottom: -10%;
-  left: -5%;
-  border-radius: 50%;
-  z-index: 0;
 }
 
 /* ================= FORM ================= */
 .signup-form {
-  position: relative;
-  z-index: 1;
   width: 100%;
   max-width: 460px;
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 45px 35px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.05), inset 0 0 0 1px rgba(255,255,255,0.5);
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
   text-align: center;
-  animation: formSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* ================= TITLE ================= */
 .signup-form h2 {
-  margin-bottom: 28px;
-  font-size: 2.1rem;
-  font-weight: 800;
-  color: #0f172a;
-  letter-spacing: -0.5px;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
 }
 
-/* ================= INPUTS & SELECT ================= */
+/* ================= INPUTS ================= */
 .signup-form input,
 .signup-form select {
   width: 100%;
-  padding: 14px 18px;
-  margin-bottom: 20px;
-  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border-radius: 10px;
   border: 1.5px solid #e2e8f0;
   font-size: 0.95rem;
-  color: #334155;
-  background: rgba(255, 255, 255, 0.9);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  outline: none;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-  appearance: none; /* remove native styling from select mostly, but keep arrow via background */
-}
-
-/* For select arrows */
-.signup-form select {
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2394a3b8%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E");
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  background-size: 10px auto;
-  padding-right: 40px;
-}
-
-.signup-form input::placeholder,
-.signup-form select:invalid {
-  color: #94a3b8;
+  background: #f8fafc;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
 }
 
 .signup-form input:focus,
 .signup-form select:focus {
-  border-color: #3b82f6;
+  border-color: #2563eb;
   background: #ffffff;
-  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15), 0 2px 4px rgba(0,0,0,0.02);
-  transform: translateY(-1px);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
-.signup-form select:disabled {
-  background-color: #f8fafc;
-  cursor: not-allowed;
-  opacity: 0.8;
+/* ================= WRAPPERS ================= */
+.mobile-wrapper,
+.email-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
 }
 
-/* ================= BUTTON ================= */
-.signup-form button {
+.mobile-wrapper input,
+.email-wrapper input {
   width: 100%;
-  padding: 15px;
-  border-radius: 12px;
+  padding: 14px 110px 14px 14px;
+}
+
+/* ================= VERIFY BUTTON (STATIC PRO UI) ================= */
+.verify-btn {
+  position: absolute;
+  right: 6px;
+  top: 15%;
+  /* ONLY for vertical center */
+  
+  height: 34px;
+  padding: 0 14px;
+
+  border-radius: 8px;
   border: none;
-  background: linear-gradient(135deg, #0d6efd 0%, #0284c7 100%);
+
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  color: #fff;
+  background: #2563eb;
+
+  cursor: pointer;
+
+  /* ❌ NO transform, NO scale, NO shift */
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* hover WITHOUT movement */
+.verify-btn:hover {
+  background: #1d4ed8;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
+}
+
+/* click */
+.verify-btn:active {
+  background: #1e40af;
+  box-shadow: none;
+}
+
+/* ================= VERIFIED ================= */
+.verify-btn.verified {
+  background: #16a34a;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ================= OTP BOX ================= */
+.otp-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.otp-box input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1.5px solid #2563eb;
+}
+
+/* OTP BUTTON */
+.otp-box .verify-btn {
+  position: static;
+  transform: none;
+  height: 42px;
+  padding: 0 18px;
+  font-size: 0.85rem;
+}
+
+/* ================= SUBMIT BUTTON ================= */
+.signup-form button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: #2563eb;
   color: white;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  margin-top: 10px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 8px 16px rgba(13, 110, 253, 0.25);
+
+  transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 
-.signup-form button:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(13, 110, 253, 0.35);
-  background: linear-gradient(135deg, #0b5ed7 0%, #0369a1 100%);
+.signup-form button[type="submit"]:hover {
+  background: #1d4ed8;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
 }
 
-.signup-form button:active:not(:disabled) {
-  transform: translateY(0);
-  box-shadow: 0 4px 8px rgba(13, 110, 253, 0.25);
+.signup-form button[type="submit"]:active {
+  background: #1e40af;
+  box-shadow: none;
 }
 
 /* ================= LINKS ================= */
 .signup-form a {
-  display: inline-block;
-  margin-top: 22px;
-  font-size: 0.95rem;
-  color: #3b82f6;
+  display: block;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #2563eb;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
 }
 
 .signup-form a:hover {
-  text-decoration: none;
   color: #1d4ed8;
-}
-
-/* ================= ANIMATIONS ================= */
-@keyframes pageFade {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes formSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px) scale(0.98);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
 }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 480px) {
   .signup-form {
-    padding: 35px 25px;
-    border-radius: 16px;
+    padding: 30px 20px;
   }
-  .signup-form h2 {
-    font-size: 1.8rem;
-    margin-bottom: 24px;
+
+  .verify-btn {
+    height: 32px;
+    font-size: 0.75rem;
   }
-  .signup-form input,
-  .signup-form select {
-    padding: 12px 16px;
-    margin-bottom: 16px;
-  }
-  .signup-form button {
-    padding: 14px;
-    font-size: 1rem;
-  }
+}
+/* ================= ALERT BOX ================= */
+.alert-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  color: #9a3412;
+
+  padding: 14px 16px;
+  border-radius: 10px;
+
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+/* ICON */
+.alert-icon {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* TEXT */
+.alert-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* DEMO CREDENTIAL BOX */
+.demo-cred {
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.demo-cred b {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #ffedd5;
+  border: 1px solid #fdba74;
+  font-size: 0.85rem;
 }
